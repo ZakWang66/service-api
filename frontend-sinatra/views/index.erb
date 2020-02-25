@@ -1,1 +1,28 @@
-<h2>Implement me!</h2>
+<h2>Welcome</h2>
+
+<form method="POST" action = <%=@url_users%>>
+    <input type="text" id="count" name="count" value="">
+    <input type="submit" value="Generate">
+</form>
+
+<form method="POST" action = <%=@url_users_destroy%>>
+    <input type="submit" value="Destroy">
+</form>
+
+<form method="GET" action = "/">
+    <input type="submit" value="Refresh">
+</form>
+
+<table>
+    <tr>
+        <th>name</th>
+        <th>email</th>
+    </tr>
+    <% @data.each { |row| %>
+    <tr>
+        <td><%= row["name"]%></td>
+        <td><%= row["email"]%></td>
+        <td><%= row["bio"]%></td>
+    </tr>
+    <% } %>
+</table>
