@@ -13,10 +13,13 @@
     <input type="submit" value="Refresh">
 </form>
 
+<h3>Total User: <%= @data.length%></h3>
+
 <table>
     <tr>
         <th>name</th>
         <th>email</th>
+        <th>bio</th>
     </tr>
     <% @data.each { |row| %>
     <tr>
